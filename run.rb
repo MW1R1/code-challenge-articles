@@ -10,13 +10,13 @@ db = SQLite3::Database.new('database.db')
 # Enable the results to be returned as a hash
 db.results_as_hash = true
 # Create a new author
-author = Author.new('John Doe')
+author = Author.new('name', 'id')
 
 # Create a new magazine
-magazine = Magazine.new('Magazine Name', 'Category')
+magazine = Magazine.new('id', 'magazine_name', 'Category')
 
 # Create a new article and associate it with the author and magazine
-article = Article.new(author, magazine, 'Article Title')
+article = Article.new('id', 'author_id', 'magazine_id', 'title')
 
 # Print the article title
 puts article.title
